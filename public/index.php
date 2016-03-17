@@ -1,10 +1,16 @@
 <?php
 
 require_once '../vendor/autoload.php';
+
+$file = '../storage/database.db';
+if (is_writeable('../storage/database.local.db')) {
+    $file = '../storage/database.local.db';
+}
 $database = new medoo([
     'database_type' => 'sqlite',
-    'database_file' => '../storage/database.db'
+    'database_file' => $file
 ]);
+
 
 $comment = new SitePoint\Comment($database);
 $comment->setEmail('bruno@skvorc.me')
