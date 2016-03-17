@@ -35,7 +35,7 @@ $database = new medoo([
 	    <label>Comment: <textarea name="comment" cols="30" rows="10"></textarea></label>
             </br>
   	    <input type="submit" value="Save">
-	</form>
+	    </form>
 
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
