@@ -11,14 +11,12 @@ $database = new medoo([
     'database_file' => $file
 ]);
 
-
+dump($database);
 $comment = new SitePoint\Comment($database);
-$comment->setEmail('bruno@skvorc.me')
-  ->setName('Bruno Skvorc')
-  ->setComment('It works!')
-  ->setComment('Hooray! Saving comments works!')
-  ->save();
-dump($database->error());
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    dump($_POST);
+}
 ?>
 <!doctype html>
 <html class="no-js" lang="">
